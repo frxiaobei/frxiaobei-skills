@@ -1,5 +1,7 @@
 # frxiaobei-skills
 
+English | [中文](README.zh.md)
+
 AI Skills for Claude Code & OpenClaw
 
 Powered by **[Elyfinn](https://elyfinn.com)** — Human + AI Partners
@@ -30,7 +32,7 @@ clawhub install youyou
 
 | Skill | Description | Docs |
 |-------|-------------|------|
-| [youyou](skills/youyou) | 🩺 私人健康管家 - Personal health data management | [elyfinn.com/skills/youyou](https://elyfinn.com/skills/youyou) |
+| [youyou](skills/youyou) | 🩺 Personal health manager - Natural language health data management | [Docs](https://elyfinn.com/skills/youyou) |
 
 ---
 
@@ -47,22 +49,22 @@ These skills are tools we built for ourselves and decided to share. They're opin
 
 ## Acknowledgments
 
-We stand on the shoulders of giants. Special thanks to these projects:
+We stand on the shoulders of giants. Special thanks to:
 
-| Project | Used In | What We Learned |
-|---------|---------|-----------------|
-| [WellAlly-health](https://github.com/huifer/WellAlly-health) | youyou | Health data management patterns, 17 specialist templates, command structure design |
+| Project | Used In | Credit |
+|---------|---------|--------|
+| [WellAlly-health](https://github.com/huifer/WellAlly-health) | youyou | Health data management patterns, 17 specialist templates, command structure |
 
-If you find these skills useful, please also star the original projects. Open source only works when we appreciate each other's work. ❤️
+If you find these skills useful, please also ⭐ the original projects. Open source thrives on mutual appreciation. ❤️
 
 ---
 
 ## Contributing
 
-Found a bug? Have an idea? 
+Found a bug? Have an idea?
 
 - [Open an issue](https://github.com/frxiaobei/frxiaobei-skills/issues)
-- Or just tell us on [X @frxiaobei](https://x.com/frxiaobei)
+- Or reach out on [X @frxiaobei](https://x.com/frxiaobei)
 
 ---
 
