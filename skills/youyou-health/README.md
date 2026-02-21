@@ -1,20 +1,22 @@
 # YouYou Health 佑佑
 
-🩺 私人健康管家 — 自然语言交互，数据本地存储
+English | [中文](README.zh.md)
+
+🩺 Personal health manager — Natural language interaction, local data storage
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> 名字来自「保佑健康」
+> Named after "保佑健康" (bless with good health)
 
-## 功能
+## Features
 
-- **档案管理** — 身高、体重、血型、过敏史、家族病史
-- **日常记录** — 血压、血糖、体重、症状、用药
-- **报告存储** — 体检报告、化验单、影像检查（支持图片）
-- **用药管理** — 药物记录、相互作用检查、提醒
-- **多学科会诊** — 17 专科视角综合分析
+- **Profile Management** — Height, weight, blood type, allergies, family history
+- **Daily Records** — Blood pressure, blood sugar, weight, symptoms, medications
+- **Report Storage** — Medical reports, lab results, imaging (supports images)
+- **Medication Management** — Drug records, interaction checks, reminders
+- **Multi-Specialty Consultation** — Analysis from 17 specialist perspectives
 
-## 安装
+## Installation
 
 ```bash
 # Claude Code
@@ -25,24 +27,24 @@
 clawhub install youyou-health
 ```
 
-## 使用
+## Usage
 
-自然语言交互，无需记命令：
+Natural language interaction, no commands to remember:
 
 ```
-"今天血压 135/88"          → 自动记录血压
-"体重 72kg"                → 更新体重
-[发送化验单图片]            → 自动识别并存储
-"综合分析我的健康状况"      → 17 专科会诊
+"Blood pressure today 135/88"     → Auto-record blood pressure
+"Weight 72kg"                     → Update weight
+[Send lab report image]           → Auto-recognize and store
+"Analyze my health status"        → 17-specialty consultation
 ```
 
-## 数据隐私
+## Data Privacy
 
-所有数据存储在本地，不会发送给任何第三方。
+All data stored locally. Never sent to third parties.
 
-## 致谢
+## Acknowledgments
 
-基于 [WellAlly-health](https://github.com/huifer/WellAlly-health) 开源项目封装。
+Based on [WellAlly-health](https://github.com/huifer/WellAlly-health) open source project.
 
 ---
 
