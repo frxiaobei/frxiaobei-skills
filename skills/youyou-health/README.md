@@ -1,4 +1,4 @@
-# YouYou 佑佑
+# YouYou Health 佑佑
 
 🩺 私人健康管家 — 自然语言交互，数据本地存储
 
@@ -19,10 +19,10 @@
 ```bash
 # Claude Code
 /plugin marketplace add frxiaobei/frxiaobei-skills
-/plugin install youyou@frxiaobei-skills
+/plugin install youyou-health@frxiaobei-skills
 
 # OpenClaw
-clawhub install youyou
+clawhub install youyou-health
 ```
 
 ## 使用

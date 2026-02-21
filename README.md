@@ -17,13 +17,13 @@ Powered by **[Elyfinn](https://elyfinn.com)** — Human + AI Partners
 /plugin marketplace add frxiaobei/frxiaobei-skills
 
 # Install skill
-/plugin install youyou@frxiaobei-skills
+/plugin install youyou-health@frxiaobei-skills
 ```
 
 ### OpenClaw
 
 ```bash
-clawhub install youyou
+clawhub install youyou-health
 ```
 
 ---
@@ -32,7 +32,7 @@ clawhub install youyou
 
 | Skill | Description | Docs |
 |-------|-------------|------|
-| [youyou](skills/youyou) | 🩺 Personal health manager - Natural language health data management | [Docs](https://elyfinn.com/skills/youyou) |
+| [youyou-health](skills/youyou-health) | 🩺 Personal health manager - Natural language health data management | [Docs](https://elyfinn.com/skills/youyou-health) |
 
 ---
 

@@ -1,12 +1,12 @@
 ---
-name: youyou
+name: youyou-health
 description: Personal health data management with natural language interaction. Use when user wants to record health metrics (blood pressure, weight, blood sugar), store medical reports/images, track medications, manage health profiles, or get multi-specialty consultation analysis. Triggers on health-related queries like "记录血压", "存体检报告", "药物提醒", "会诊分析", or mentions of symptoms, checkups, medications.
 author: frxiaobei@elyfinn
 repository: https://github.com/frxiaobei/frxiaobei-skills
 license: MIT
 ---
 
-# YouYou 佑佑
+# YouYou Health 佑佑
 
 私人健康数据管理助手，自然语言交互，无需记命令。
 
@@ -118,6 +118,6 @@ mkdir -p data/{medications,生化检查,影像检查,手术记录,出院小结}
 
 由 **frxiaobei@elyfinn** 维护
 
-- 主页：[elyfinn.com/skills/youyou](https://elyfinn.com/skills/youyou)
+- 主页：[elyfinn.com/skills/youyou-health](https://elyfinn.com/skills/youyou-health)
 - 问题反馈：[GitHub Issues](https://github.com/frxiaobei/frxiaobei-skills/issues)
 - 作者：[@frxiaobei](https://x.com/frxiaobei) & Finn 🦊

@@ -17,13 +17,13 @@
 /plugin marketplace add frxiaobei/frxiaobei-skills
 
 # 安装 skill
-/plugin install youyou@frxiaobei-skills
+/plugin install youyou-health@frxiaobei-skills
 ```
 
 ### OpenClaw
 
 ```bash
-clawhub install youyou
+clawhub install youyou-health
 ```
 
 ---
@@ -32,7 +32,7 @@ clawhub install youyou
 
 | Skill | 描述 | 文档 |
 |-------|------|------|
-| [youyou](skills/youyou) | 🩺 佑佑 - 私人健康管家，自然语言交互 | [文档](https://elyfinn.com/skills/youyou) |
+| [youyou-health](skills/youyou-health) | 🩺 佑佑 - 私人健康管家，自然语言交互 | [文档](https://elyfinn.com/skills/youyou-health) |
 
 ---
 
