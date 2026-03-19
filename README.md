@@ -23,7 +23,14 @@ Powered by **[Elyfinn](https://elyfinn.com)** — Human + AI Partners
 ### OpenClaw
 
 ```bash
+# Install voice notes
+clawhub install elyfinn-voice-notes
+
+# Install health manager
 clawhub install youyou-health
+
+# Install image downloader
+clawhub install article-image-downloader
 ```
 
 ---

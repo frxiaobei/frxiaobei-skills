@@ -23,7 +23,14 @@
 ### OpenClaw
 
 ```bash
+# 安装语音笔记
+clawhub install elyfinn-voice-notes
+
+# 安装健康管家
 clawhub install youyou-health
+
+# 安装图片下载
+clawhub install article-image-downloader
 ```
 
 ---
