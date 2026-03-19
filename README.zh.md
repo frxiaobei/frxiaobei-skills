@@ -32,7 +32,9 @@ clawhub install youyou-health
 
 | Skill | 描述 | 文档 |
 |-------|------|------|
+| [elyfinn-voice-notes](skills/elyfinn-voice-notes) | 🎙️ 智能语音笔记 - 自动分类录音并生成结构化笔记 | [文档](skills/elyfinn-voice-notes/README.zh.md) |
 | [youyou-health](skills/youyou-health) | 🩺 佑佑 - 私人健康管家，自然语言交互 | [文档](https://elyfinn.com/skills/youyou-health) |
+| [article-image-downloader](skills/article-image-downloader) | 📷 文章图片下载 - 批量下载网页文章中的图片 | [文档](skills/article-image-downloader/SKILL.md) |
 
 ---
 

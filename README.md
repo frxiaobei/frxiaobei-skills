@@ -32,7 +32,9 @@ clawhub install youyou-health
 
 | Skill | Description | Docs |
 |-------|-------------|------|
+| [elyfinn-voice-notes](skills/elyfinn-voice-notes) | 🎙️ Smart voice memo processor - Auto-classifies recordings into 7 types and generates formatted notes | [Docs](skills/elyfinn-voice-notes/README.md) |
 | [youyou-health](skills/youyou-health) | 🩺 Personal health manager - Natural language health data management | [Docs](https://elyfinn.com/skills/youyou-health) |
+| [article-image-downloader](skills/article-image-downloader) | 📷 Download article images - Fetches all images from web articles for local use | [Docs](skills/article-image-downloader/SKILL.md) |
 
 ---
 
