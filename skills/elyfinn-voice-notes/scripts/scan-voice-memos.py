@@ -24,7 +24,7 @@ from datetime import datetime, timedelta
 # 添加当前目录到 path，以便导入 db 模块
 sys.path.insert(0, str(Path(__file__).parent))
 from db import get_db, migrate_from_json
-from config import load_config, config_exists, get_output_directory, get_recording_source, should_ask_on_uncertain, get_type_label
+from config import load_config, config_exists, get_output_directory, get_recording_source, should_ask_on_uncertain, get_type_label, load_glossary
 
 # Load user config first
 USER_CONFIG = load_config()
@@ -255,13 +255,17 @@ def generate_meeting_notes(transcript, recording_info):
     # Load template from file
     template = load_template(rec_type)
     
-    # Build prompt with variables
+    # Build prompt with variables (glossary is injected so the LLM can correct
+    # ASR mistranscriptions of business/proper-noun terminology). When
+    # glossary_path is not configured the placeholder "(no glossary configured)"
+    # is rendered and the prompt instructs the LLM to skip the rule.
     prompt = template.format(
         date_str=date_str,
         type_prefix=type_prefix,
         transcript=transcript,
         path=recording_info.get('path', ''),
-        duration=recording_info.get('duration', 0)
+        duration=recording_info.get('duration', 0),
+        glossary=load_glossary(USER_CONFIG),
     )
 
     # Step 3: 调用 Gemini 生成笔记

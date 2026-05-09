@@ -1,0 +1,81 @@
+# Business Terminology Glossary (Example)
+
+> Voice recordings often contain proper nouns (product names, technical jargon, people's names)
+> that ASR systems mistranscribe. This file lists those terms so the LLM can correct them when
+> generating notes.
+>
+> **How it's used**: The contents of this file are injected into the prompt under
+> `[Business Terminology Glossary]`. The LLM checks the transcript against these patterns and
+> restores the canonical form (e.g., "阿贾" → "Agile", "克劳德口德" → "Claude Code").
+>
+> **How to enable**:
+> Set `glossary_path` in your `config.yaml`. Pointing it at this example works for
+> general tech terms; you'll usually want to copy this and add your own team's project names
+> and people's names.
+>
+> **Format**: One entry per line:
+> - `Canonical form (often mistranscribed as "X", "Y", "Z")`
+> - or simply `Canonical form` when there's no specific misrecognition pattern but you want
+>   the LLM to favor this spelling/casing.
+>
+> Below is a starter set of commonly mistranscribed AI/dev terms. Add/remove freely.
+
+## AI / Dev Tools
+
+- Claude Code (often mistranscribed as "克劳德口德", "clod code", "Cloud Code")
+- Cursor (often "靠瑟", "科瑟", "Coster")
+- Codex (often "扣德克斯")
+- Copilot (often "扣派洛")
+- MCP / Model Context Protocol (often "MC P", "MCB")
+- Sub-agent / 子 agent (often "撒不爱真")
+- Skill / 技能包
+- Hook / 钩子
+- Prompt / 提示词
+- RAG (often "rag", "瑞")
+- Token (often "tokn")
+- Embedding (often "因别丁")
+- Fine-tuning / 微调
+- Inference / 推理
+- Figma (often "飞", "飞干嘛", "Mac 形式" — when context is design/prototype/UI)
+- AST / 抽象语法树 (often "ST", "S T")
+- Harness (often "哈尼斯" — in AI Agent framework context)
+- Wiki (often "V", "位")
+- Knowledge Graph / 知识图谱
+- IDE
+- Mock / Mock 文件 (often "Mac", "Mac 形式")
+
+## General Engineering
+
+- Agile -> 敏捷 (often "阿贾", "阿就")
+- Method -> 方法 (often "买色", "麦色")
+- Sprint -> 迭代 (often "斯普林特")
+- Standup / 站会
+- Retro / 复盘 (Retrospective)
+- Code Review / 代码评审
+- Pull Request / PR (often "P R")
+- Merge / 合并
+- Rebase
+- Branch / 分支
+- Commit
+- CI/CD (often "C I C D")
+- Pipeline
+- Jenkins (often "詹金斯", "詹金森")
+- Docker
+- Kubernetes / k8s
+- Repo / Repository
+- Confluence (often "卡夫伦斯")
+- Jira (often "几啦", "吉拉")
+- Obsidian (often "奥比士", "奥比Sin")
+
+## Project-Specific (add your own)
+
+> Add your team's internal project/product/tool names here. ASR loves to mistranscribe these.
+
+- (e.g.) Lobster -> OpenClaw  (when team verbally calls it "龙虾")
+
+## People (add as encountered)
+
+> Add coworkers' names so ASR doesn't mishear them. Easy way to maintain: every time
+> the LLM produces a note, copy any newly-correct names back here.
+
+- (Add as needed)

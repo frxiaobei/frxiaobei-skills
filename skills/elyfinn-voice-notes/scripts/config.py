@@ -37,7 +37,11 @@ DEFAULT_CONFIG = {
         "brainstorm": "Brainstorm",
         "consult": "Consult",
         "note": "Note"
-    }
+    },
+    # Path to a markdown glossary of business/proper-noun terminology that the
+    # LLM should use to correct ASR mistranscriptions. See
+    # references/glossary.md.example for format. Empty string = disabled.
+    "glossary_path": ""
 }
 
 
@@ -160,6 +164,38 @@ def get_type_label(config: Dict[str, Any], rec_type: str) -> str:
     """Get display label for a recording type."""
     labels = config.get("type_labels", DEFAULT_CONFIG["type_labels"])
     return labels.get(rec_type, rec_type.capitalize())
+
+
+# ----- Glossary (business terminology correction) -----
+
+PLACEHOLDER_NO_GLOSSARY = "(no glossary configured)"
+
+
+def get_glossary_path(config: Dict[str, Any]) -> Optional[Path]:
+    """Resolve glossary file path. Returns None if not configured or empty."""
+    p = config.get("glossary_path") or ""
+    if not p:
+        return None
+    return Path(p).expanduser()
+
+
+def load_glossary(config: Dict[str, Any]) -> str:
+    """Read glossary content for prompt injection.
+
+    Returns the file contents when glossary_path is set and the file exists.
+    Otherwise returns a placeholder so templates that contain `{glossary}`
+    still render (the prompt instructs the LLM to skip the rule when it sees
+    the placeholder).
+    """
+    path = get_glossary_path(config)
+    if path is None:
+        return PLACEHOLDER_NO_GLOSSARY
+    try:
+        text = path.read_text(encoding="utf-8").strip()
+        return text or PLACEHOLDER_NO_GLOSSARY
+    except OSError as e:
+        print(f"Warning: could not read glossary at {path}: {e}")
+        return PLACEHOLDER_NO_GLOSSARY
 
 
 if __name__ == "__main__":
