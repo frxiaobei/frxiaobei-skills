@@ -38,6 +38,13 @@ type_labels:
   brainstorm: "Brainstorm"
   consult: "Consult"
   note: "Note"
+
+# Optional: path to a markdown glossary of business/proper-noun terminology.
+# When set, the contents are injected into the generation prompt so the LLM
+# can correct ASR mistranscriptions (e.g., "克劳德口德" → "Claude Code",
+# "阿贾" → "Agile"). Empty string disables.
+# See references/glossary.md.example for format.
+glossary_path: ""
 ```
 
 ## Field Details
@@ -80,3 +87,23 @@ Examples:
 |-------|------|-------------|
 | `enabled` | boolean | Whether to auto-scan for new recordings |
 | `interval_minutes` | number | How often to scan (15, 30, 60) |
+
+### glossary_path
+
+Path to a markdown file listing business/proper-noun terms that ASR commonly
+mistranscribes. When set, the file's contents are injected into the LLM's
+generation prompt so the model can restore canonical forms in the notes.
+
+| Value | Behavior |
+|-------|----------|
+| `""` (empty, default) | Disabled. Prompt receives placeholder `(no glossary configured)` and skips the correction step. |
+| `"~/path/to/glossary.md"` | Loads file contents and injects them under `[Business Terminology Glossary]` in the prompt. |
+
+See [references/glossary.md.example](../glossary.md.example) for format. A
+typical glossary lists entries like `Claude Code (often "克劳德口德",
+"Cloud Code")` so the LLM knows what to correct.
+
+**Recommended workflow**: copy `glossary.md.example` to a stable location
+(e.g. `~/.config/elyfinn-voice-notes/glossary.md` or somewhere in your
+dotfiles) and add your team's project names + people's names as you
+encounter ASR errors.
