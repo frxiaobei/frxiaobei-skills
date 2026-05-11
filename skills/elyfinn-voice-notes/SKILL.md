@@ -235,8 +235,9 @@ Select type-specific template
     ↓
 Generate formatted notes (Gemini)
     ↓
-Save to Obsidian meetings/
-    ↓
+Save to Obsidian meetings/   ← notes contain "Speaker 1", "Speaker 2" labels
+    ↓                           (optional: substitute with real names via
+    ↓                            scripts/relabel-speakers.py)
 Dispatch tasks by @tags
 ```
 
@@ -251,6 +252,11 @@ python3 scripts/db.py --stats
 
 # View pending
 python3 scripts/db.py --pending
+
+# Substitute Speaker 1/2 labels in a generated note with real names
+# (run after a note is generated; supports interactive prompts or --map for batch)
+python3 scripts/relabel-speakers.py meetings/2026-05-08-Meeting-foo.md
+python3 scripts/relabel-speakers.py meetings/foo.md --map 1=Alice,2=Bob --no-confirm
 ```
 
 ### Data Storage
@@ -325,6 +331,7 @@ skills/elyfinn-voice-notes/
 │   ├── scan-voice-memos.py     # Voice memo processing ✅
 │   ├── scan-meetings.py        # Meeting notes scan
 │   ├── extract-todos.py        # Extract TODOs/@tags
+│   ├── relabel-speakers.py     # Substitute Speaker N labels with real names
 │   ├── db.py                   # SQLite database
 │   └── config.py               # User config loading
 ├── templates/                  # Type-specific prompt templates
